@@ -1,4 +1,5 @@
 .App {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +12,7 @@
 }
 
 #article-list {
-  margin-top: 8em;
+  margin-top: 4em;
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@
 .article-card {
   padding-left: 2.5%;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+
   opacity: 0.9;
   background-blend-mode: color;
   background-color: #e62636;
@@ -51,6 +52,7 @@ nav {
 }
 
 .header {
+  margin: 10px 0 0 0;
   background-blend-mode: color;
   background-color: #ed2739;
   width: 95%;
@@ -58,7 +60,7 @@ nav {
   color: #000000;
   border-color: whitesmoke;
   border-style: double;
-  padding-left: 10px;
+  padding: 5px 10px 0 10px;
   z-index: 10;
 }
 
@@ -68,7 +70,12 @@ nav {
 .header-link {
   color: #000000;
   text-decoration: none;
-  padding: 1rem;
+}
+
+.coding-link,
+.football-link,
+.cooking-link {
+  padding: 0 0 0 0;
 }
 
 @media (min-width: 640px) {
