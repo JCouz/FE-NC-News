@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   background-image: url('https://wallpapercave.com/wp/wp8166595.png');
   background-size: cover;
   background-position: center center;
@@ -11,6 +11,8 @@
 }
 
 #article-list {
+  margin-top: 8em;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,22 +40,42 @@
   text-align: left;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topic-links {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
-  float: left;
-  display: block;
-  padding: 10px;
-  position: fixed;
   background-blend-mode: color;
   background-color: #ed2739;
-  width: 25%;
+  width: 95%;
   border-radius: 5px;
   color: #000000;
   border-color: whitesmoke;
   border-style: double;
+  padding-left: 10px;
+  z-index: 10;
+}
+
+.coding-link,
+.football-link,
+.cooking-link,
+.header-link {
+  color: #000000;
+  text-decoration: none;
+  padding: 1rem;
 }
 
 @media (min-width: 640px) {
   .article-card {
     width: 640px;
+  }
+  .topic-links {
+    flex-direction: row;
   }
 }
