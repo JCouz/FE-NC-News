@@ -18,10 +18,12 @@ export const fetchArticles = (topic) => {
       });
 };
 
-export const fetchTopics = () => {
+export const fetchArticlePage = (article_id) => {
   return axios
-    .get('https://nc-news-example-seminar-3-9.herokuapp.com/api/topics')
+    .get(
+      `https://nc-news-example-seminar-3-9.herokuapp.com/api/articles/${article_id}`
+    )
     .then((res) => {
-      return res.data.topics;
+      return res.data.article;
     });
 };

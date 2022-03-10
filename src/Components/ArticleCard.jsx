@@ -1,4 +1,5 @@
 import timeAgo from '../utils';
+import { Link } from 'react-router-dom';
 
 export default function ArticleCard({
   article_id,
@@ -12,7 +13,9 @@ export default function ArticleCard({
     <section key={article_id} className="article-card">
       <dl>
         <dt>
-          <strong>{title}</strong>
+          <Link className="article-title" to={`/articles/${article_id}`}>
+            <strong>{title}</strong>
+          </Link>
         </dt>
         <dt className="inner-text">
           {topic[0].toUpperCase() + topic.substring(1)}

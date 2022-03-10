@@ -19,22 +19,27 @@
   align-items: center;
 }
 
-.article-card {
+.article-card,
+.article-page {
   padding-left: 2.5%;
   align-items: center;
 
   opacity: 0.9;
   background-blend-mode: color;
-  background-color: #e62636;
+  background-color: black;
   line-height: 1.5em;
   height: auto;
   width: 95%;
-  color: black;
-  border-color: whitesmoke;
+  color: whitesmoke;
+  border-color: #ed2739;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   border-style: double;
   border-radius: 5px;
+}
+
+.article-page {
+  height: 100vh;
 }
 
 .inner-text {
@@ -54,11 +59,12 @@ nav {
 .header {
   margin: 10px 0 0 0;
   background-blend-mode: color;
-  background-color: #ed2739;
+  opacity: 0.9;
   width: 95%;
   border-radius: 5px;
-  color: #000000;
-  border-color: whitesmoke;
+  background-color: black;
+  color: whitesmoke;
+  border-color: #ed2739;
   border-style: double;
   padding: 5px 10px 0 10px;
   z-index: 10;
@@ -68,14 +74,18 @@ nav {
 .football-link,
 .cooking-link,
 .header-link {
-  color: #000000;
+  color: whitesmoke;
   text-decoration: none;
 }
 
 .coding-link,
 .football-link,
 .cooking-link {
-  padding: 0 0 0 0;
+  padding: 0 50px 50px 0;
+}
+
+.article-title {
+  color: whitesmoke;
 }
 
 @media (min-width: 640px) {
