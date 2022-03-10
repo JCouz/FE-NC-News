@@ -27,3 +27,14 @@ export const fetchArticlePage = (article_id) => {
       return res.data.article;
     });
 };
+
+export const updateArticle = (article_id, voteInc) => {
+  return axios
+    .patch(
+      `https://nc-news-example-seminar-3-9.herokuapp.com/api/articles/${article_id}`,
+      { inc_votes: voteInc }
+    )
+    .then((res) => {
+      return res.data.article;
+    });
+};
