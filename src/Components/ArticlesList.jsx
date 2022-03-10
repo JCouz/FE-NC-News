@@ -34,9 +34,3 @@ export default function ArticlesList() {
     </div>
   );
 }
-
-// in articleCard make title a link, link to params route
-// route renders new component articlePage
-// in article page, use params to get whichever article it came from
-//  fetch api based on article id
-// render whatever is required on that page

@@ -20,7 +20,8 @@
 }
 
 .article-card,
-.article-page {
+.article-page,
+.comment-card {
   padding-left: 2.5%;
   align-items: center;
 
@@ -38,8 +39,25 @@
   border-radius: 5px;
 }
 
+#comments-header {
+  text-align: center;
+  opacity: 0.9;
+  background-blend-mode: color;
+  background-color: black;
+  line-height: 1.5em;
+  height: auto;
+  width: 95%;
+  color: whitesmoke;
+  border-color: #ed2739;
+  border-style: double;
+  border-radius: 5px;
+}
+
+.article-card {
+  height: 100%;
+}
+
 .article-page {
-  height: 100vh;
 }
 
 .inner-text {

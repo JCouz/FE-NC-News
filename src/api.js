@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const fetchArticles = (topic) => {
-  // routing notes, add links in header for each topic
   if (topic) {
     return axios
       .get(
@@ -36,5 +35,26 @@ export const updateArticle = (article_id, voteInc) => {
     )
     .then((res) => {
       return res.data.article;
+    });
+};
+
+export const fetchArticleComments = (article_id) => {
+  return axios
+    .get(
+      `https://nc-news-example-seminar-3-9.herokuapp.com/api/articles/${article_id}/comments`
+    )
+    .then((res) => {
+      return res.data.comments;
+    });
+};
+
+export const updateComment = (comment_id, voteInc) => {
+  return axios
+    .patch(
+      `https://nc-news-example-seminar-3-9.herokuapp.com/api//comments/${comment_id}`,
+      { inc_votes: voteInc }
+    )
+    .then((res) => {
+      return res.data.comments;
     });
 };

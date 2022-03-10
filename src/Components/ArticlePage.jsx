@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as api from '../api';
 import ArticleVoter from './ArticleVoter';
+import Comments from './Comments';
 
 export default function ArticlePage() {
   const { article_id } = useParams();
@@ -25,23 +26,29 @@ export default function ArticlePage() {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <section key={article_id} className="article-page">
-      <dl>
-        <dt>
-          <strong>{title}</strong>
-        </dt>
-        <ArticleVoter article_id={article_id} articleVotes={articleVotes} />
+    <>
+      <section className="article-page">
+        <dl>
+          <dt>
+            <strong>{title}</strong>
+          </dt>
+          <ArticleVoter article_id={article_id} articleVotes={articleVotes} />
 
-        <dt>{author}</dt>
-        <dt>{body}</dt>
-        <dt className="inner-text">
-          {topic[0].toUpperCase() + topic.substring(1)}
-        </dt>
-        <dt className="inner-text">
-          Created: {timeAgo.format(new Date(created_at))}
-        </dt>
-        <dt>Comments: {comment_count}</dt>
-      </dl>
-    </section>
+          <dt>{author}</dt>
+          <dt>{body}</dt>
+          <dt className="inner-text">
+            {topic[0].toUpperCase() + topic.substring(1)}
+          </dt>
+          <dt className="inner-text">
+            Created: {timeAgo.format(new Date(created_at))}
+          </dt>
+          <dt>Comments: {comment_count}</dt>
+        </dl>
+      </section>
+      <section className="comments">
+        <h3 id="comments-header">Comments</h3>
+        <Comments article_id={article_id} />
+      </section>
+    </>
   );
 }
