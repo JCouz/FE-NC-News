@@ -53,11 +53,22 @@
   border-radius: 5px;
 }
 
-.article-card {
-  height: 100%;
+#add-comment-title,
+#add-comment-box {
+  opacity: 0.9;
+  background-blend-mode: color;
+  background-color: black;
+
+  height: auto;
+  width: 90%;
+  color: whitesmoke;
+  border-color: #ed2739;
+  border-style: double;
+  border-radius: 5px;
 }
 
-.article-page {
+.article-card {
+  height: 100%;
 }
 
 .inner-text {

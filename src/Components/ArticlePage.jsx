@@ -4,10 +4,11 @@ import { useState, useEffect } from 'react';
 import * as api from '../api';
 import ArticleVoter from './ArticleVoter';
 import Comments from './Comments';
+import AddComment from './AddComment';
 
 export default function ArticlePage() {
   const { article_id } = useParams();
-
+  const [comments, setComments] = useState([]);
   const [singleArticle, setSingleArticle] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const { title, body, topic, author, created_at, comment_count } =
@@ -47,7 +48,13 @@ export default function ArticlePage() {
       </section>
       <section className="comments">
         <h3 id="comments-header">Comments</h3>
-        <Comments article_id={article_id} />
+        <AddComment article_id={article_id} setComments={setComments} />
+
+        <Comments
+          comments={comments}
+          setComments={setComments}
+          article_id={article_id}
+        />
       </section>
     </>
   );

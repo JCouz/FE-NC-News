@@ -58,3 +58,14 @@ export const updateComment = (comment_id, voteInc) => {
       return res.data.comments;
     });
 };
+
+export const addComment = (article_id, newComment) => {
+  return axios
+    .post(
+      `https://nc-news-example-seminar-3-9.herokuapp.com/api/articles/${article_id}/comments`,
+      newComment
+    )
+    .then((res) => {
+      return res.data.comment;
+    });
+};
