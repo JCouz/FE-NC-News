@@ -8,7 +8,6 @@ export default function ArticleCard({
   topic,
   votes,
 }) {
-  console.log(typeof topic);
   return (
     <section key={article_id} className="article-card">
       <dl>
