@@ -1,1 +1,3 @@
-NC News - Work In Progress
+## NC News
+
+Work In Progress
