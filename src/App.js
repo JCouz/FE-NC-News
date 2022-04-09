@@ -1,8 +1,9 @@
-import './App.css';
-import Header from './Components/Header';
-import ArticlesList from './Components/ArticlesList';
-import ArticlePage from './Components/ArticlePage';
-import { Routes, Route } from 'react-router-dom';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./Components/Header";
+import ArticlesList from "./Components/ArticlesList";
+import ArticlePage from "./Components/ArticlePage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (

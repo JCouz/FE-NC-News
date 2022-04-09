@@ -1,5 +1,5 @@
-import timeAgo from '../utils';
-import { Link } from 'react-router-dom';
+import timeAgo from "../utils";
+import { Link } from "react-router-dom";
 
 export default function ArticleCard({
   article_id,
@@ -20,7 +20,8 @@ export default function ArticleCard({
           {topic[0].toUpperCase() + topic.substring(1)}
         </dt>
         <dt className="inner-text">Votes: {votes}</dt>
-        <dt className="inner-text">{timeAgo.format(new Date(created_at))}</dt>
+        {/* <dt className="inner-text">{timeAgo.format(new Date(created_at))}</dt> */}
+        <dt className="inner-text">{created_at}</dt>
       </dl>
     </section>
   );

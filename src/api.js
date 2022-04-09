@@ -1,20 +1,21 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const fetchArticles = (topic) => {
-  if (topic) {
-    return axios
-      .get(
-        `https://nc-news-example-seminar-3-9.herokuapp.com/api/articles?topic=${topic}`
-      )
-      .then((res) => {
-        return res.data.articles;
-      });
-  } else
-    return axios
-      .get(`https://nc-news-example-seminar-3-9.herokuapp.com/api/articles`)
-      .then((res) => {
-        return res.data.articles;
-      });
+export const fetchArticles = (topic, sort_by, order) => {
+  return axios
+    .get("https://nc-news-example-seminar-3-9.herokuapp.com/api/articles", {
+      params: { topic: topic, sort_by: sort_by, order: order },
+    })
+    .then((res) => {
+      return res.data.articles;
+    });
+};
+
+export const fetchTopics = () => {
+  return axios
+    .get("https://nc-news-example-seminar-3-9.herokuapp.com/api/topics")
+    .then((res) => {
+      return res.data.topics;
+    });
 };
 
 export const fetchArticlePage = (article_id) => {

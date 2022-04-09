@@ -1,10 +1,10 @@
-import timeAgo from '../utils';
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import * as api from '../api';
-import ArticleVoter from './ArticleVoter';
-import Comments from './Comments';
-import AddComment from './AddComment';
+import timeAgo from "../utils";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import * as api from "../api";
+import ArticleVoter from "./ArticleVoter";
+import Comments from "./Comments";
+import AddComment from "./AddComment";
 
 export default function ArticlePage() {
   const { article_id } = useParams();
@@ -22,7 +22,7 @@ export default function ArticlePage() {
       setIsLoading(false);
       setArticleVotes(article.votes);
     });
-  }, []);
+  }, [article_id]);
 
   if (isLoading) return <p>Loading...</p>;
 

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import * as api from '../api';
+import { useState, useEffect } from "react";
+import * as api from "../api";
 
 export default function CommentVoter({ comment_id, votes }) {
   const [voteInc, setVoteInc] = useState(0);
@@ -7,9 +7,9 @@ export default function CommentVoter({ comment_id, votes }) {
 
   useEffect(() => {
     api.updateComment(comment_id, voteInc).catch(() => {
-      setVoteError('Oops, something went wrong');
+      setVoteError("Oops, something went wrong");
     });
-  }, [voteInc]);
+  }, [comment_id, voteInc]);
 
   return (
     <>
