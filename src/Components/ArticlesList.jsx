@@ -38,7 +38,7 @@ export default function ArticlesList() {
         <Row className="topic-sorter-box">
           <Col>
             <Stack direction="horizontal" gap={3}>
-              <div forecolor="white">Topic:</div>
+              <div>Topic:</div>
               <select className="topic-sorter" value={topic} onChange={(e) => setTopic(e.target.value)}>
                 <option value="">All</option>
                 {topicsList.map((t, index) => (
@@ -47,7 +47,11 @@ export default function ArticlesList() {
                   </option>
                 ))}
               </select>
-              <div forecolor="white">Sort by:</div>
+            </Stack>
+          </Col>
+          <Col>
+            <Stack direction="horizontal" gap={3}>
+              <div>Sort:</div>
               <select className="topic-sorter" value={sort_by} onChange={(e) => setSortBy(e.target.value)}>
                 <option value="">Date/Time</option>
                 <option value="title">Title</option>
@@ -55,6 +59,10 @@ export default function ArticlesList() {
                 <option value="author">Author</option>
                 <option value="votes">Votes</option>
               </select>
+            </Stack>
+          </Col>
+          <Col>
+            <Stack direction="horizontal" gap={3}>
               <Button variant="outline-danger" size="sm" onClick={() => setOrder("ASC")}>
                 <ArrowUpCircle />
               </Button>

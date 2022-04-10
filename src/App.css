@@ -37,7 +37,6 @@
   font-size: 1.2em;
 }
 
-.article-card,
 .article-page,
 .comment-card {
   padding-left: 2.5%;
@@ -55,6 +54,18 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   border-style: double;
   border-radius: 5px;
+}
+
+.article-card {
+  opacity: 0.9;
+  color: whitesmoke;
+  background-color: black;
+  line-height: 1.5em;
+  border-color: #ed2739;
+  border-style: double;
+  border-radius: 5px;
+  margin-bottom: 4px;
+  padding: 10px;
 }
 
 #comments-header {
@@ -83,10 +94,6 @@
   border-color: #ed2739;
   border-style: double;
   border-radius: 5px;
-}
-
-.article-card {
-  height: 100%;
 }
 
 .inner-text {
@@ -124,12 +131,10 @@ nav {
 
 .article-title {
   color: whitesmoke;
+  font-size: large;
 }
 
 @media (min-width: 640px) {
-  .article-card {
-    width: 640px;
-  }
   .topic-links {
     flex-direction: row;
   }
