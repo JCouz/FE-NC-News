@@ -11,8 +11,7 @@ export default function ArticlePage() {
   const [comments, setComments] = useState([]);
   const [singleArticle, setSingleArticle] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const { title, body, topic, author, created_at, comment_count } =
-    singleArticle;
+  const { title, body, topic, author, created_at, comment_count } = singleArticle;
   const [articleVotes, setArticleVotes] = useState(0);
 
   useEffect(() => {
@@ -28,7 +27,7 @@ export default function ArticlePage() {
 
   return (
     <>
-      <section className="article-page">
+      <section className="article-page m-3 py-2">
         <dl>
           <dt>
             <strong>{title}</strong>
@@ -37,24 +36,16 @@ export default function ArticlePage() {
 
           <dt>{author}</dt>
           <dt>{body}</dt>
-          <dt className="inner-text">
-            {topic[0].toUpperCase() + topic.substring(1)}
-          </dt>
-          <dt className="inner-text">
-            Created: {timeAgo.format(new Date(created_at))}
-          </dt>
+          <dt className="inner-text">{topic[0].toUpperCase() + topic.substring(1)}</dt>
+          <dt className="inner-text">Created: {timeAgo.format(new Date(created_at))}</dt>
           <dt>Comments: {comment_count}</dt>
         </dl>
       </section>
-      <section className="comments">
+      <section>
         <h3 id="comments-header">Comments</h3>
         <AddComment article_id={article_id} setComments={setComments} />
 
-        <Comments
-          comments={comments}
-          setComments={setComments}
-          article_id={article_id}
-        />
+        <Comments comments={comments} setComments={setComments} article_id={article_id} />
       </section>
     </>
   );
