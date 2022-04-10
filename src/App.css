@@ -47,7 +47,6 @@
   background-color: black;
   line-height: 1.5em;
   height: auto;
-  width: 95%;
   color: whitesmoke;
   border-color: #ed2739;
   display: grid;
@@ -75,21 +74,16 @@
   background-color: black;
   line-height: 1.5em;
   height: auto;
-  width: 95%;
   color: whitesmoke;
   border-color: #ed2739;
   border-style: double;
   border-radius: 5px;
 }
 
-#add-comment-title,
 #add-comment-box {
   opacity: 0.9;
   background-blend-mode: color;
   background-color: black;
-
-  height: auto;
-  width: 90%;
   color: whitesmoke;
   border-color: #ed2739;
   border-style: double;
@@ -132,10 +126,4 @@ nav {
 .article-title {
   color: whitesmoke;
   font-size: large;
-}
-
-@media (min-width: 640px) {
-  .topic-links {
-    flex-direction: row;
-  }
 }
