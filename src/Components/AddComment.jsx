@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import * as api from '../api';
+import { useState } from "react";
+import * as api from "../api";
 
 export default function AddComment({ setComments, article_id }) {
   // this is a variable, commentInput is declared as '' in useState, setCommentInput is reassigning that variable
-  const [commentInput, setCommentInput] = useState('');
+  const [commentInput, setCommentInput] = useState("");
   const handleSubmit = (event) => {
     event.preventDefault();
     api
-      .addComment(article_id, { body: commentInput, username: 'cooljmessy' })
+      .addComment(article_id, { body: commentInput, username: "cooljmessy" })
       .then((comment) => {
-        setCommentInput('');
+        setCommentInput("");
         setComments((currentComment) => {
           return [comment, ...currentComment];
         });

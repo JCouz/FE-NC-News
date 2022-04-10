@@ -1,9 +1,9 @@
 .App {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://wallpapercave.com/wp/wp8166595.png');
+  background-image: url("https://wallpapercave.com/wp/wp8166595.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -19,7 +19,24 @@
   align-items: center;
 }
 
-.article-card,
+.topic-sorter {
+  background-color: black;
+  color: whitesmoke;
+  border-color: #ed2739;
+  min-width: 150px;
+}
+
+.topic-sorter-box {
+  background-color: black;
+  color: whitesmoke;
+  border-color: #ed2739;
+  border: solid;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
 .article-page,
 .comment-card {
   padding-left: 2.5%;
@@ -37,6 +54,18 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   border-style: double;
   border-radius: 5px;
+}
+
+.article-card {
+  opacity: 0.9;
+  color: whitesmoke;
+  background-color: black;
+  line-height: 1.5em;
+  border-color: #ed2739;
+  border-style: double;
+  border-radius: 5px;
+  margin-bottom: 4px;
+  padding: 10px;
 }
 
 #comments-header {
@@ -67,10 +96,6 @@
   border-radius: 5px;
 }
 
-.article-card {
-  height: 100%;
-}
-
 .inner-text {
   text-align: left;
 }
@@ -99,28 +124,17 @@ nav {
   z-index: 10;
 }
 
-.coding-link,
-.football-link,
-.cooking-link,
 .header-link {
   color: whitesmoke;
   text-decoration: none;
 }
 
-.coding-link,
-.football-link,
-.cooking-link {
-  padding: 0 50px 50px 0;
-}
-
 .article-title {
   color: whitesmoke;
+  font-size: large;
 }
 
 @media (min-width: 640px) {
-  .article-card {
-    width: 640px;
-  }
   .topic-links {
     flex-direction: row;
   }

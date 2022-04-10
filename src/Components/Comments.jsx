@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import * as api from '../api';
-import CommentCard from './CommentCard';
+import { useState, useEffect } from "react";
+import * as api from "../api";
+import CommentCard from "./CommentCard";
 
 export default function Comments({ article_id, comments, setComments }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,13 +10,13 @@ export default function Comments({ article_id, comments, setComments }) {
       setComments(articleComments);
       setIsLoading(false);
     });
-  }, []);
+  }, [article_id, setComments]);
 
   const mappedComments = comments.map(
     ({ comment_id, body, author, votes, created_at }) => {
       return (
         <CommentCard
-          key={'comment' + comment_id}
+          key={"comment" + comment_id}
           comment_id={comment_id}
           body={body}
           author={author}
