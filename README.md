@@ -26,7 +26,7 @@ npm start
 ```
 ## Tech Used
 
-- [React](hhttps://reactjs.org/) - A JavaScript library for building user interfaces.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js.
 - [React-Bootstrap](https://react-bootstrap.github.io/) - The most popular front-end framework. Rebuilt for React.
 - [Javascript-time-ago](https://www.npmjs.com/package/javascript-time-ago) - Localized relative date/time formatting.
