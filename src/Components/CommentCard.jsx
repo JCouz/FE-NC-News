@@ -53,10 +53,12 @@ export default function CommentCard({
           <Col>{body}</Col>
         </Row>
         <Row>
-          <Col>User: {author}</Col>
+          <Col>
+            User: <strong>{author}</strong>
+          </Col>
         </Row>
         <Row>
-          <Col>{timeAgo.format(new Date(created_at))}</Col>
+          <Col className="my-1">{timeAgo.format(new Date(created_at))}</Col>
         </Row>
         <Row>
           <Col>

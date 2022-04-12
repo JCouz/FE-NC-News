@@ -36,30 +36,28 @@ export default function ArticlePage() {
           <Row>
             <Col xs="auto">
               <strong>{title}</strong>
-              <Col>
+              <Col className="my-2">
                 <ArticleVoter
                   article_id={article_id}
                   articleVotes={articleVotes}
                 />
               </Col>
-              <Col></Col>
-              <Col> {body}</Col> Author: <strong> {author}</strong>
+              <Col>{body}</Col>
+              <Col className="my-2">
+                User: <strong> {author}</strong>
+              </Col>
             </Col>
-            <Col>
+            <Col className="my-2">
               <dt className="inner-text">
                 {topic[0].toUpperCase() + topic.substring(1)}
               </dt>
             </Col>
-            <Col>
+            <Col className="my-2">
               <dt className="inner-text">
                 Created: {timeAgo.format(new Date(created_at))}
               </dt>
             </Col>
-            <Col>
-              <dt>Comments: {comment_count}</dt>
-            </Col>
-            <Col></Col>
-            <Col></Col>
+            <Col>Comments: {comment_count}</Col>
           </Row>
         </Container>
       </section>
