@@ -1,4 +1,4 @@
-## Northcoders News (Front End)  [Deployed site](nc-news-jcouz.netlify.app)
+## Northcoders News (Front End)  [Deployed Site](nc-news-jcouz.netlify.app)
 
 ## Summary
 
