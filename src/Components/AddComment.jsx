@@ -24,9 +24,9 @@ export default function AddComment({ setComments, article_id }) {
   };
   return (
     <Container id="add-comment-box">
-      <Row>
-        <Col>
-          <Form onSubmit={handleSubmit} className="mt-2">
+      <Form onSubmit={handleSubmit} className="my-2">
+        <Row>
+          <Col>
             <Form.Control
               type="text"
               placeholder="Add Comment..."
@@ -35,15 +35,15 @@ export default function AddComment({ setComments, article_id }) {
                 setCommentInput(event.target.value);
               }}
             />
-          </Form>
-        </Col>
-        <Col xs="auto">
-          <Button variant="danger" className="m-2" type="submit">
-            Submit
-            <Plus className="mx-2" />
-          </Button>
-        </Col>
-      </Row>
+          </Col>
+          <Col xs="auto">
+            <Button variant="danger" className="mx-2" type="submit">
+              Submit
+              <Plus className="mx-2" />
+            </Button>
+          </Col>
+        </Row>
+      </Form>
     </Container>
   );
 }

@@ -44,7 +44,7 @@ export const updateComment = (comment_id, voteInc) => {
   return axios
     .patch(`${API_BASE}/api/comments/${comment_id}`, { inc_votes: voteInc })
     .then((res) => {
-      return res.data.comments;
+      return res.data.comment;
     });
 };
 
