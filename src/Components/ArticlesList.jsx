@@ -47,7 +47,7 @@ export default function ArticlesList() {
                 <option value="">All</option>
                 {topicsList.map((t, index) => (
                   <option key={index} value={t.slug}>
-                    {t.slug}
+                    {t.slug[0].toUpperCase() + t.slug.substring(1)}
                   </option>
                 ))}
               </select>
@@ -61,7 +61,7 @@ export default function ArticlesList() {
                 value={sort_by}
                 onChange={(e) => setSortBy(e.target.value)}
               >
-                <option value="">Date/Time</option>
+                <option value="created_at">Date/Time</option>
                 <option value="title">Title</option>
                 <option value="topic">Topic</option>
                 <option value="author">Author</option>

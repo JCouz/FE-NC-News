@@ -37,7 +37,12 @@ export default function AddComment({ setComments, article_id }) {
             />
           </Col>
           <Col xs="auto">
-            <Button variant="danger" className="mx-2" type="submit">
+            <Button
+              disabled={commentInput.trim().length === 0}
+              variant="danger"
+              className="mx-2"
+              type="submit"
+            >
               Submit
               <Plus className="mx-2" />
             </Button>

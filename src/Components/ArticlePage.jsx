@@ -8,6 +8,7 @@ import AddComment from './AddComment';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Alert from 'react-bootstrap/Alert';
 
 export default function ArticlePage() {
   const { article_id } = useParams();
@@ -17,16 +18,30 @@ export default function ArticlePage() {
   const { title, body, topic, author, created_at, comment_count } =
     singleArticle;
   const [articleVotes, setArticleVotes] = useState(0);
+  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     setIsLoading(true);
-    api.fetchArticlePage(article_id).then((article) => {
-      setSingleArticle(article);
-      setIsLoading(false);
-      setArticleVotes(article.votes);
-    });
+    api
+      .fetchArticlePage(article_id)
+      .then((article) => {
+        setSingleArticle(article);
+        setArticleVotes(article.votes);
+        setIsLoading(false);
+      })
+      .catch((err) => setErrorMsg('Invalid Article ID'));
   }, [article_id]);
 
+  if (errorMsg.length > 0)
+    return (
+      <Container id="errors">
+        <Row>
+          <Col>
+            <Alert variant="danger">{errorMsg}</Alert>
+          </Col>
+        </Row>
+      </Container>
+    );
   if (isLoading) return <p>Loading...</p>;
 
   return (
