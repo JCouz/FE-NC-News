@@ -1,18 +1,22 @@
-import { useState, useEffect } from "react";
-import * as api from "../api";
+import { useState, useEffect } from 'react';
+import * as api from '../api';
+import { ArrowUpCircle, ArrowDownCircle } from 'react-feather';
+import Button from 'react-bootstrap/Button';
 
 export default function ArticleVoter({ article_id, articleVotes }) {
   const [voteInc, setVoteInc] = useState(0);
   const [voteError, setVoteError] = useState(null);
   useEffect(() => {
     api.updateArticle(article_id, voteInc).catch(() => {
-      setVoteError("Oops, something went wrong");
+      setVoteError('Oops, something went wrong');
     });
   }, [article_id, voteInc]);
 
   return (
     <>
-      <button
+      <Button
+        variant="outline-danger"
+        size="sm"
         disabled={voteInc === 1}
         onClick={() => {
           setVoteInc((currentVotes) => {
@@ -20,9 +24,11 @@ export default function ArticleVoter({ article_id, articleVotes }) {
           });
         }}
       >
-        ⇧
-      </button>
-      <button
+        <ArrowUpCircle />
+      </Button>
+      <Button
+        variant="outline-danger"
+        size="sm"
         disabled={voteInc === -1}
         onClick={() => {
           setVoteInc((currentVotes) => {
@@ -30,8 +36,8 @@ export default function ArticleVoter({ article_id, articleVotes }) {
           });
         }}
       >
-        ⇩
-      </button>
+        <ArrowDownCircle />
+      </Button>
       <p className="inner-text">Votes: {articleVotes + voteInc}</p>
       {voteError && <p>{voteError}</p>}
     </>

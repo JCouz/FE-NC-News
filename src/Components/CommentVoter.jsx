@@ -1,5 +1,7 @@
-import { useState, useEffect } from "react";
-import * as api from "../api";
+import { useState, useEffect } from 'react';
+import * as api from '../api';
+import { ArrowUpCircle, ArrowDownCircle } from 'react-feather';
+import Button from 'react-bootstrap/Button';
 
 export default function CommentVoter({ comment_id, votes }) {
   const [voteInc, setVoteInc] = useState(0);
@@ -7,13 +9,15 @@ export default function CommentVoter({ comment_id, votes }) {
 
   useEffect(() => {
     api.updateComment(comment_id, voteInc).catch(() => {
-      setVoteError("Oops, something went wrong");
+      setVoteError('Oops, something went wrong');
     });
   }, [comment_id, voteInc]);
 
   return (
     <>
-      <button
+      <Button
+        variant="outline-danger"
+        size="sm"
         disabled={voteInc === 1}
         onClick={() => {
           setVoteInc((currentVotes) => {
@@ -21,9 +25,11 @@ export default function CommentVoter({ comment_id, votes }) {
           });
         }}
       >
-        ⇧
-      </button>
-      <button
+        <ArrowUpCircle />
+      </Button>
+      <Button
+        variant="outline-danger"
+        size="sm"
         disabled={voteInc === -1}
         onClick={() => {
           setVoteInc((currentVotes) => {
@@ -31,8 +37,8 @@ export default function CommentVoter({ comment_id, votes }) {
           });
         }}
       >
-        ⇩
-      </button>
+        <ArrowDownCircle />
+      </Button>
       <p className="inner-text">Votes: {votes + voteInc}</p>
       {voteError && <p>{voteError}</p>}
     </>
