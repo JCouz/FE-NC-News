@@ -63,16 +63,12 @@ export default function ArticlePage() {
               </Col>
             </Col>
             <Col className="my-2">
-              <dt className="inner-text">
-                {topic[0].toUpperCase() + topic.substring(1)}
-              </dt>
+              {topic[0].toUpperCase() + topic.substring(1)}
             </Col>
             <Col className="my-2">
-              <dt className="inner-text">
-                Created: {timeAgo.format(new Date(created_at))}
-              </dt>
+              Created: {timeAgo.format(new Date(created_at))}
             </Col>
-            <Col>Comments: {comment_count}</Col>
+            <Col className="my-2">Comments: {comment_count}</Col>
           </Row>
         </Container>
       </section>

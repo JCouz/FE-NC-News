@@ -52,7 +52,7 @@ export default function CommentCard({
         <Row>
           <Col>{body}</Col>
         </Row>
-        <Row>
+        <Row className="my-1">
           <Col>
             User: <strong>{author}</strong>
           </Col>

@@ -38,7 +38,7 @@ export default function ArticleVoter({ article_id, articleVotes }) {
       >
         <ArrowDownCircle />
       </Button>
-      <p className="inner-text">Votes: {articleVotes + voteInc}</p>
+      <p className="inner-text mt-1">Votes: {articleVotes + voteInc}</p>
       {voteError && <p>{voteError}</p>}
     </>
   );

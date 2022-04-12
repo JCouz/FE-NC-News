@@ -39,7 +39,7 @@ export default function CommentVoter({ comment_id, votes }) {
       >
         <ArrowDownCircle />
       </Button>
-      <p className="inner-text">Votes: {votes + voteInc}</p>
+      <p className="inner-text mt-1">Votes: {votes + voteInc}</p>
       {voteError && <p>{voteError}</p>}
     </>
   );
