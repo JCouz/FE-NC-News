@@ -25,6 +25,11 @@ Once the installs have completed, you can use the following command to start the
 ```
 npm start
 ```
+## Notes
+
+You may return to the home screen at any point by simply click the NC News logo. 
+
+The site is currently hardcoded to be logged in as a certain user. Further improvemnts to the site may add the ability to log in as your own user.
 
 ## Tech Used
 
