@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: #6a0004;
+  min-width: 100vh;
 }
 
 #article-list {
