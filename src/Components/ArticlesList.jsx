@@ -30,7 +30,7 @@ export default function ArticlesList() {
     setIsLoading(false);
   }, [topic, sort_by, order]);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <p className="loading">Loading...</p>;
 
   return (
     <div id="article-list">

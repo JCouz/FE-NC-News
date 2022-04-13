@@ -134,3 +134,9 @@ nav {
   color: azure;
   height: 100vh;
 }
+
+.loading {
+  font-size: xx-large;
+  color: #ed2739;
+  margin-top: 50%;
+}
