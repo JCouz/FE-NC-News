@@ -1,10 +1,10 @@
-## Northcoders News (Front End)
+## Northcoders News (Front End) [Deployed Site](https://nc-news-jcouz.netlify.app/)
 
 ## Summary
 
 This app is the front end equivalent for my NC News API (Which can be found [here](https://jcouz-nc-news.herokuapp.com/api))
 
-Like the back end of NC News, please feel free to fork/clone this repo if you wish. 
+Like the back end of NC News, please feel free to fork/clone this repo if you wish.
 
 Once cloned and within the repo locally, please follow the installation instructions below.
 
@@ -12,18 +12,20 @@ Once cloned and within the repo locally, please follow the installation instruct
 
 Firstly, please ensure you have a minimum of Node v17.2.0 in order to avoid any issues when using this repo.
 
-If you do not have the correct version of Node click [here](https://nodejs.org/en/download/) to install the latest version.
+If you do not have the correct version of Node click [here](https://nodejs.org/en/download/current/) to install the latest version.
 
 Following this, please install the dependencies with:
 
 ```
 npm install
 ```
+
 Once the installs have completed, you can use the following command to start the app:
 
 ```
 npm start
 ```
+
 ## Tech Used
 
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
